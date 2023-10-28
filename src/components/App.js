@@ -8,17 +8,16 @@ import Article from "./Article";
 console.log(blogData);
 
 function App() {
-  let name = "Overreacted"
-  const posts = [
-    { title: "Article 1", content: "Content of Article 1" },
-    { title: "Article 2", content: "Content of Article 2" },
-    { title: "Article 3", content: "Content of Article 3" },
-  ];
+  let name = blogData.name
+  let image = blogData.image
+  let about = blogData.about
+  let posts = blogData.post
+  
 
   return (
     <div className="App">
-      <Header> <h1>name={name} </h1></Header>
-      <About></About>
+      <Header name={name} />
+      <About about={about} image={image}/>
       <ArticleList posts={posts} />
       <Article></Article>
     </div>
